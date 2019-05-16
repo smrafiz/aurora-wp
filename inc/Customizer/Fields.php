@@ -8,8 +8,8 @@
 
 namespace AuroraThemes\Customizer;
 
-use AuroraThemes\Api\Customizer as Customizer_Api;
 use AuroraThemes\Core\Base as Base;
+use AuroraThemes\Core\Customizer as Customizer_Api;
 use AuroraThemes\Customizer\Defaults as Defaults;
 use AuroraThemes\Customizer\Controls\Toggle_Switch;
 

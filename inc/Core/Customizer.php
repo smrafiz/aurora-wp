@@ -6,7 +6,7 @@
  * @since 		1.0
  */
 
-namespace AuroraThemes\Api;
+namespace AuroraThemes\Core;
 
 use AuroraThemes\Core\Base as Base;
 use AuroraThemes\Customizer\Controls\Toggle_Switch_Control;

@@ -6,7 +6,7 @@
  * @since 		1.0
  */
 
-namespace AuroraThemes\Api;
+namespace AuroraThemes\Core;
 
 // Do not allow directly accessing this file.
 if( ! defined( 'ABSPATH' ) ) {

@@ -10,8 +10,8 @@ namespace AuroraThemes\Admin;
 
 use AuroraThemes\Admin\Settings_Callbacks as Callbacks;
 use AuroraThemes\Admin\Plugins as Plugins;
-use AuroraThemes\Api\Settings as Settings;
 use AuroraThemes\Core\Base as Base;
+use AuroraThemes\Core\Settings as Settings;
 
 // Do not allow directly accessing this file.
 if ( !defined('ABSPATH' ) ) {

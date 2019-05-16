@@ -8,7 +8,7 @@
 
 namespace AuroraThemes\Customizer;
 
-use AuroraThemes\Api\Customizer as Customizer_Api;
+use AuroraThemes\Core\Customizer as Customizer_Api;
 
 // Do not allow directly accessing this file.
 if ( !defined('ABSPATH' ) ) {

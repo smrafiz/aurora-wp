@@ -65,7 +65,7 @@ final class Init {
     private function get_classes() {
         $classes = [
             \AuroraThemes\Admin\Admin::class,
-            \AuroraThemes\Base\Widgets::class,
+            \AuroraThemes\Core\Widgets::class,
             \AuroraThemes\Customizer\Customizer::class,
             \AuroraThemes\Setup\Menus::class,
             \AuroraThemes\Setup\Setup::class,
