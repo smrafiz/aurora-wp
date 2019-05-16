@@ -1,0 +1,57 @@
+#aurora-wp-dashboard {
+	max-width: 1024px;
+}
+
+#aurora-content-tab .nav > .nav-tab:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+#aurora-content-tab .tab-pane {
+	display: none;
+	margin-bottom: 80px;
+}
+
+#aurora-content-tab .tab-pane.active {
+	display: block;
+}
+
+#aurora-content-tab .container {
+	max-width: 1024px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#aurora-content-tab .row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+#aurora-content-tab .col {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+
+#aurora-content-tab .col-4 {
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+}
+
+#aurora-content-tab .col-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+#aurora-content-tab .plugin-thumbnail img {
+	max-width: 100%;
+}

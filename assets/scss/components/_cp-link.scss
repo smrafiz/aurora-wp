@@ -1,0 +1,48 @@
+/**
+ * Components Link
+ *
+ */
+
+.post-link {
+	.post-format-link {
+		padding: 30px;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    @extend %default-margin-bottom;
+	    @extend %bgc-offset;
+
+	    >i,
+	    >span {
+	    	display: inline-block;
+	    }
+
+	    > i {
+		    margin-right: 20px;
+		    width: 30px;
+		    height: 30px;
+		    line-height: 30px;
+		    text-align: center;
+		    font-size: 18px;
+		    vertical-align: top;
+		    @extend .circle;
+		    @extend %color-white;
+		    @extend %bgc-primary;
+		    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+		    @extend %cx-transition;
+	    }
+
+	    > span {
+		    width: calc(100% - 50px);
+		    vertical-align: middle;
+	    }
+	}
+
+	a {
+		&:hover,
+		&:focus {
+			i {
+		    	@extend %bgc-secondary;
+			}
+		}
+	}
+}

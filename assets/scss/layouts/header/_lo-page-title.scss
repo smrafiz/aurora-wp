@@ -1,0 +1,57 @@
+/**
+ * Layout Page Title
+ *
+ */
+
+#page-title {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	h1 {
+	    font-size: 34px;
+	    line-height: 1.2;
+	    word-wrap: break-word;
+	    text-align: center;
+	    @extend %mb0;
+	    @extend %color-white;
+	}
+
+	h1 + .breadcrumb {
+		margin-top: $cx-heading-margin-bottom;
+		@include respond-to(mobile) {
+			margin-top: 10px;
+		}
+	}
+
+	.header-element-dark & {
+		h1 {
+			@extend %color-text;
+		}
+	}
+}
+
+.floating-header + #page-title {
+	padding-top: 320px;
+	margin-bottom: 70px;
+}
+
+
+#whole #page-title.page-title {
+	@include respond-to(mobile) {
+		padding-top: $cx-section-spacing-mob - $cx-heading-margin-bottom;
+		padding-bottom: $cx-section-spacing-mob;
+	}
+}
+
+header {
+	&.no-page-title {
+		padding-bottom: $cx-section-spacing - 22px;
+		@include respond-to(tablet) {
+			padding-bottom: $cx-section-spacing - $cx-heading-margin-bottom;
+		}
+		@include respond-to(mobile) {
+			padding-bottom: $cx-section-spacing-mob - $cx-heading-margin-bottom;
+		}
+
+	}
+}

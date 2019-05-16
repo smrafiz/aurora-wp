@@ -1,0 +1,99 @@
+/**************************************
+s01 - Shortcode - CX Contacts
+**************************************/
+
+.cx-contacts {
+    .contact-item {
+        padding: 5px 0 5px 35px;
+        @extend %pos-r;
+
+        &::before {
+            font-family: Ionicons;
+            top: 3px;
+            left: 0;
+            font-size: 20px;
+            @extend %pos-a;
+            @extend %color-primary;
+        }
+
+        span {
+            padding-right: 15px;
+        }
+
+        &:first-child {
+            padding-top: 0;
+
+            &::before {
+                top: 0;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        a {
+            @extend %color-text;
+
+            &:hover {
+                @extend %color-primary;
+            }
+        }
+    }
+
+    .contact-address {
+        &::before {
+            content: "\f325";
+        }
+    }
+
+    .contact-phone {
+        &::before {
+            content: "\f13e";
+        }
+    }
+
+    .contact-fax {
+        &::before {
+            content: "\f31a";
+        }
+    }
+
+    .contact-email {
+        &::before {
+            content: "\f322";
+        }
+    }
+
+    .contact-website {
+        &::before {
+            content: "\f301";
+        }
+    }
+}
+
+p + .cx-contacts {
+    padding-top: 15px;
+    margin-top: -5px;
+    border-top: 1px dashed #939393;
+}
+
+#colophon {
+    .cx-contacts {
+        .contact-item {
+            &::before {
+                @extend %color-white;
+            }
+        }
+
+        .contact-address {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    }
+}
+
+
+
+

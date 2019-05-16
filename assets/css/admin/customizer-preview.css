@@ -1,0 +1,343 @@
+#customize-controls .customize-control {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#customize-controls .customize-control .buttonset,
+#customize-controls .customize-control .select2-container,
+#customize-controls .customize-control button {
+    margin-bottom: 12px;
+}
+
+#customize-controls .customize-control .customize-control-title {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+#customize-controls .customize-control .customize-control-description {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+#customize-controls #sub-accordion-panel-widgets .accordion-section-title::before,
+#customize-controls #sub-accordion-panel-nav_menus .accordion-section-title::before,
+#customize-controls .accordion-section-title .panel-title::before {
+	content: none;
+}
+
+#customize-controls .customize-section-title h3 .dashicons {
+    display: none;
+}
+
+#customize-controls div.customize-section-description {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 500;
+    border-bottom: 1px solid #0085ba;
+    border-top: 1px solid #0085ba;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#customize-controls .customize-control.customize-control-kirki-color {
+    padding-bottom: 12px;
+}
+
+#customize-controls input[type=checkbox]:checked:before {
+	color: #0085ba;
+}
+
+#customize-controls .customize-control input[type=number], 
+#customize-controls .customize-control input[type=search], 
+#customize-controls .customize-control input[type=tel], 
+#customize-controls .customize-control input[type=url], 
+#customize-controls .customize-control input[type=text], 
+#customize-controls .customize-control input[type=password], 
+#customize-controls .customize-control input[type=email] {
+    margin: 0;
+    border: 1px solid #c8c8c8;
+    height: 32px;
+    width: 400px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+    margin-bottom: 12px;
+}
+
+#customize-controls .accordion-section-content .customize-control:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+#customize-controls .customize-control .attachment-media-view .default-button, 
+#customize-controls .customize-control .attachment-media-view .remove-button, 
+#customize-controls .customize-control .attachment-media-view .upload-button, 
+#customize-controls .customize-control-header button.new, 
+#customize-controls .customize-control-header button.remove,
+#customize-controls .wp-core-ui .button,
+#customize-controls .wp-core-ui .button-secondary {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #c8c8c8;
+}
+
+#customize-controls .attachment-media-view.attachment-media-view-image {
+	margin-bottom: 12px;
+}
+
+#customize-controls .wp-picker-container .wp-color-result.button,
+#customize-controls .wp-color-result-text {
+	border-radius: 0;
+}
+
+#customize-controls .wp-core-ui .button.button-small {
+	border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 32px;
+    line-height: 30px;
+}
+
+/*#customize-controls .customize-control-kirki-switch label {
+	border: 1px solid #7f291b;
+	background: #fff;
+}
+
+#customize-controls .customize-control-kirki-switch input:checked + label {
+    background: #fff;
+    border: 1px solid #0085ba;
+}
+
+#customize-controls .customize-control-kirki-switch .switch-off, 
+#customize-controls .customize-control-kirki-switch .switch-on {
+	color: #333;
+    font-weight: 500;
+    padding: 6px 8px;
+}
+
+#customize-controls .customize-control-kirki-switch label:after {
+    top: 4px;
+    background: #b73b27;
+    border: 1px solid #7f291b;
+    width: calc(.85rem + 6px);
+    height: calc(.85rem + 6px);
+}
+
+#customize-controls .customize-control-kirki-switch input:checked + label:after {
+    background: #0085ba;
+    border: 1px solid #0085ba;
+}*/
+
+#customize-controls .customize-control-kirki-switch label {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    background: #FAFAFB;
+    height: 30px;
+    transition: 0.4s;
+}
+
+#customize-controls .customize-control-kirki-switch .switch-off, 
+#customize-controls .customize-control-kirki-switch .switch-on {
+    color: #333;
+    font-weight: 500;
+    padding: 0;
+    visibility: hidden;
+    width: 35px;
+}
+
+#customize-controls .customize-control-kirki-switch label:after {
+    top: 3.5px;
+    width: 23px;
+    height: 23px;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px rgba(26,53,71,.25), 0 0 0 1px rgba(26,53,71,.07); 
+    background: #fff;
+    transition: .4s;
+}
+
+#customize-controls .customize-control-kirki-switch input:checked + label {
+    border-color: #0085ba;
+    background: rgba(0, 133, 186, 0.7);
+}
+
+#customize-controls .select2-container--default .select2-selection--single .select2-selection__arrow,
+#customize-controls .select2-container--default .select2-selection--multiple, 
+#customize-controls .select2-container--default .select2-selection--single {
+    height: 32px;
+    border-color: #c8c8c8;
+    outline: 0;
+}
+
+#customize-controls .customize-control-kirki-radio-image img {
+    margin: 10px 10px 10px 0;
+	border: 1px solid #ccc;
+    max-width: 90px;
+}
+
+#customize-controls .customize-control-kirki-radio-image input:checked + label img {
+	border: 1px solid #0085ba;
+}
+
+#customize-controls .customize-control select {
+	height: 32px;
+    line-height: 32px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+    border-color: #c8c8c8;
+}
+
+#customize-controls .customize-control-kirki-radio-buttonset .buttonset .switch-label,
+#customize-controls .customize-control-kirki-background .background-attachment .buttonset .switch-label, 
+#customize-controls .customize-control-kirki-background .background-size .buttonset .switch-label {
+	padding: 0.8em 1em;
+	font-weight: 500;
+	border: 1px solid #c8c8c8;
+}
+
+#customize-controls .customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label,
+#customize-controls .customize-control-kirki-background .background-attachment .buttonset .switch-input:checked + .switch-label, 
+#customize-controls .customize-control-kirki-background .background-size .buttonset .switch-input:checked + .switch-label {
+    background-color: #0085ba;
+    border: 1px solid #0085ba;
+    color: #fff;
+}
+
+#customize-controls .wp-core-ui .button-secondary:focus, 
+#customize-controls .wp-core-ui .button-secondary:hover, 
+#customize-controls .wp-core-ui .button.focus, 
+#customize-controls .wp-core-ui .button.hover, 
+#customize-controls .wp-core-ui .button:focus, 
+#customize-controls .wp-core-ui .button:hover {
+	border-color: #0085ba;
+}
+
+#customize-controls .select2-container--default .select2-selection--single .select2-selection__arrow:focus,
+#customize-controls .select2-container--default .select2-selection--multiple:focus, 
+#customize-controls .select2-container--default .select2-selection--single:focus,
+#customize-controls .wp-core-ui .button-secondary:focus, 
+#customize-controls .wp-core-ui .button.focus, 
+#customize-controls .wp-core-ui .button:focus,
+#customize-controls .customize-control input[type=number]:focus, 
+#customize-controls .customize-control input[type=search]:focus, 
+#customize-controls .customize-control input[type=tel]:focus, 
+#customize-controls .customize-control input[type=url]:focus, 
+#customize-controls .customize-control input[type=text]:focus, 
+#customize-controls .customize-control input[type=password]:focus, 
+#customize-controls .customize-control input[type=email]:focus {
+	border-color: #0085ba;
+    -webkit-box-shadow: 0 0 2px rgba(0, 133, 186, 0.8);
+    box-shadow: 0 0 2px rgba(0, 133, 186, 0.8);
+}
+
+#customize-controls .customize-control-kirki-slider .wrapper input[type=text] {
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: right;
+    padding: 0;
+    width: 40px;
+}
+
+#customize-controls .wp-picker-container input[type=text].wp-color-picker {
+	width: 65px;
+	height: auto;
+}
+
+#customize-controls .customize-control-kirki-typography .wrapper {
+	margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+#customize-controls .kirki-host-font-locally {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#customize-controls #sub-accordion-section-custom_css div.customize-section-description {
+	font-size: 13px;
+	font-weight: 400;
+	border-bottom: 0;
+}
+
+#customize-controls .control-section .accordion-section-title::before {
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+
+#customize-controls #accordion-section-custom_css .accordion-section-title::before,
+#customize-controls #accordion-panel-woocommerce .accordion-section-title::before,
+#customize-controls .control-panel-widgets .accordion-section-title::before,
+#customize-controls .control-panel-nav_menus .accordion-section-title::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: 400;
+    font-style: normal;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px;
+    transition: color .1s ease-in;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#customize-controls .control-panel-nav_menus .accordion-section-title::before {
+    content: "\f333";
+}
+
+#customize-controls .control-panel-widgets .accordion-section-title::before {
+	content: "\f212";
+}
+
+#customize-controls #accordion-section-custom_css .accordion-section-title::before {
+    content: "\f499";
+}
+
+#customize-controls #accordion-panel-woocommerce .accordion-section-title::before {
+    content: "\f174";
+}
+
+.customize-panel-back:focus, 
+.customize-panel-back:hover, 
+.customize-section-back:focus, 
+.customize-section-back:hover,
+#customize-controls .control-section .accordion-section-title:focus, 
+#customize-controls .control-section .accordion-section-title:hover, 
+#customize-controls .control-section.open .accordion-section-title, 
+#customize-controls .control-section:hover>.accordion-section-title {
+	color: #0085ba;
+	border-left-color: #0085ba;
+}
+
+#customize-outer-theme-controls .control-section .accordion-section-title:focus:after, 
+#customize-outer-theme-controls .control-section .accordion-section-title:hover:after, 
+#customize-outer-theme-controls .control-section.open .accordion-section-title:after, 
+#customize-outer-theme-controls .control-section:hover>.accordion-section-title:after, 
+#customize-theme-controls .control-section .accordion-section-title:focus:after, 
+#customize-theme-controls .control-section .accordion-section-title:hover:after, 
+#customize-theme-controls .control-section.open .accordion-section-title:after, 
+#customize-theme-controls .control-section:hover>.accordion-section-title:after {
+	color: #0085ba;
+}
+
+#customize-controls .date-time-fields .date-input.day, 
+#customize-controls .date-time-fields .date-input.hour, 
+#customize-controls .date-time-fields .date-input.minute {
+	width: 46px;
+}
+
+#customize-controls .date-time-fields .date-input.year {
+	width: 60px;
+}
+

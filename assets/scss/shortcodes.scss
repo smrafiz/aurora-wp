@@ -1,0 +1,45 @@
+/*
+This file is used to contain all shortcodes imports.
+Files inside this folder should contain all styles relating
+to a reusable shortcodes.
+*/
+
+/******************************
+
+INDEX:
+
+	s00 - Shortcode - Common Helpers
+	s01 - Shortcode - Section Title
+
+
+	s50 - Shortcode - Responsive CSS
+
+
+******************************/
+
+
+// Abstracts
+@import "abstracts/__abstracts-dir";
+
+
+/**************************************
+s00 - Shortcode - Common Helpers
+**************************************/
+/**
+ * Placeholders
+ *
+ */
+@import 'base/placeholder';
+
+/**
+ * Colors
+ *
+ */
+@import 'base/colors-shortcodes';
+
+// Shortcodes Styles
+@import "shortcodes/__shortcodes-dir";
+
+/**************************************
+s50 - Shortcode - Responsive CSS
+**************************************/

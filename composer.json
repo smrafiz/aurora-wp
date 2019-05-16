@@ -1,0 +1,25 @@
+{
+    "name": "s.m.rafiz/aurora-wp",
+    "description": "Aurora WordPress Starter Theme",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "S.M. Rafiz",
+            "email": "rafiz@codexin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "^1.0.0",
+		"phpcompatibility/phpcompatibility-wp": "^1.0.0",
+		"wp-coding-standards/wpcs": "^1.0.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.4.4"
+	},
+    "autoload": {
+        "psr-4": {
+            "AuroraThemes\\": "./inc"
+        }
+    }
+}

@@ -1,0 +1,93 @@
+// Shortcode Color helpers
+
+%color-primary {
+	color: $cx-primary-color;
+}
+
+%color-secondary {
+	color: $cx-secondary-color;
+}
+
+%color-tertiary {
+	color: $cx-tertiary-color;
+}
+
+%color-transparent {
+	color: transparent;
+}
+
+%color-offset {
+	color: $cx-offset-color;
+}
+
+%color-white {
+	color: lighten($cx-text-color, 100%);
+}
+
+%color-dark {
+	color: #252525;
+}
+
+%color-black {
+	color: #000;
+}
+
+%color-text {
+	color: $cx-text-color;
+}
+
+%bgc-primary {
+	background-color: $cx-primary-color;
+}
+
+%bgc-secondary {
+	background-color: $cx-secondary-color;
+}
+
+%bgc-tertiary {
+	background-color: $cx-tertiary-color;
+}
+
+%bgc-transparent {
+	background-color: transparent;
+}
+
+%bgc-offset {
+	background-color: $cx-offset-color;
+}
+
+%bgc-white {
+	background-color: lighten($cx-text-color, 100%);
+}
+
+%bgc-dark {
+	background-color: #252525;
+}
+
+%bgc-black {
+	background-color: #000;
+}
+
+%border-primary {
+	border-color: $cx-primary-color;
+}
+
+%border-secondary {
+	border-color: $cx-secondary-color;
+}
+
+%border-tertiary {
+	border-color: $cx-tertiary-color;
+}
+
+%border-default {
+	border-color: $cx-border-color;
+}
+
+%border-offset {
+	border-color: $cx-offset-color;
+}
+
+%border-black {
+	border-color: #000;
+}

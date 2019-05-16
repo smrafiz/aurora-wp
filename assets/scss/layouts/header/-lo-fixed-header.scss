@@ -1,0 +1,40 @@
+/**
+ * Layout Fixed Header
+ *
+ */
+ .sticky-wrapper{
+ 	// margin-top: 25px;
+ }
+
+.is-sticky {
+	.navigation-wrapper {
+		background: rgba(32,32,32,.95);
+    	margin-top: 0;
+    	border-bottom: 1px solid #222;
+
+	}
+}
+
+
+// html {
+//   scroll-behavior: smooth;
+// }
+// @media (min-height: 30px) {
+// 	// .header-bottom{
+// 	// 	width: 100%;
+// 	// 	position: sticky;	  
+// 	// 	top: 0;
+// 	// 	z-index: 999;
+// 	// }
+// 	.is-sticky {
+// 		position: fixed;
+// 		top: 0;
+// 		width: 100%;
+// 		.navigation-wrapper {
+// 			margin-top: 0;
+// 			background: rgba(32,32,32,.95);
+// 		}
+// 	}
+
+
+// }

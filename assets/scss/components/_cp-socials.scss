@@ -1,0 +1,29 @@
+/**
+ * Components Socials
+ *
+ */
+
+.socials {
+	&.social-icons-round {
+		display: flex;
+		justify-content: center;
+		margin-bottom: -10px;
+		// .list-inline {
+			a {
+				display: block;
+			    width: 40px;
+			    height: 40px;
+			    line-height: 40px;
+			    text-align: center;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			    @extend .circle;
+			}
+		// }
+
+		// .list-inline-item:not(:last-child) {
+		//     margin-right: 3px;
+		//     margin-bottom: 10px;
+		// }
+	}
+}

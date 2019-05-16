@@ -1,0 +1,20 @@
+/**************************************
+s02 - Shortcode - CX Socials
+**************************************/
+
+#cx_socials {
+	> ul {
+		> li {
+			padding-right: 0;
+			padding-left: 0;
+			padding-bottom: 0;
+			> a {
+				@extend %color-white;
+				
+				&::before {
+					content: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/**
+ * Components Side Area
+ *
+ */
+
+.side-area-module {
+	position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    visibility: hidden;
+    width: 450px;
+    height: 100%;
+    padding: 70px 50px;
+    transition: all 0.5s;
+	z-index: 1;
+    transform: translate(50%, 0);
+    overflow-y: auto;
+    // background: linear-gradient(135deg, lighten(white, 10%) 0%, $cx-offset-color 100%);
+    @extend %bgc-tertiary;
+
+    &.side-area-open {
+	    visibility: visible;
+	    transition: transform 0.5s;
+	    transform: translate(0, 0);
+    }
+
+    .side-area-close {
+		@extend .pos-a;
+		top: 30px;
+		right: 30px;
+
+		i {
+			font-size: 30px;
+		}
+    }
+}
+
+#slide-side-area {
+	h1,h2,h3,h4,h5,h6,p,a,span,ul,li,i {
+		@extend %color-white;
+
+		&:last-of-type {
+			@extend %mb0;
+		}
+	}
+
+	.widgettitle {
+		@extend %default-margin-bottom;
+
+		&::before {
+			background: rgba(255,255,255,0.1);
+		}
+	}
+
+	img {
+		width: 180px;
+	}
+
+	.side-area-inner {
+	    // display: flex;
+	    // flex-direction: column;
+	    // justify-content: center;
+	    // // height: 100%;
+
+		.sidebar-widget {
+		    @extend %mb-half;
+		    @extend %pb-half;
+		    border-bottom: 1px solid rgba(255,255,255,0.1);
+		    padding-top: 0;
+
+		    &:first-child {
+		    	border-top: 0;
+		    }
+		}
+	}
+
+	.btn-wrapper {
+	    @extend %mb-half;
+	    @extend %pb-half;
+	    border-bottom: 1px solid rgba(255,255,255,0.1);
+	    display: flex;
+	    justify-content: space-between;
+
+	    .default-btn {
+	    	min-width: 160px;
+    	    // box-shadow: 0px 16px 44px rgba(0, 0, 0, 0.3);
+    	    min-height: 41px;
+	    }
+	}
+
+	// .default-btn {
+	// 	width: 100%;
+	// 	font-size: 20px;
+	// 	@extend %default-margin-bottom;
+
+	// 	&:last-child {
+	// 		@extend %mb0;
+	// 	}
+	// }
+
+    .widget_nav_menu {
+    	ul {
+	    	li {
+	    		@extend .post-btn;
+	    		padding-left: 0;
+
+	    		&::before {
+	    			display: none;
+	    		}
+
+	    		a {
+	    			font-size: 24px;
+	    			margin-bottom: 15px;
+	    			@extend %color-white;
+	    			text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	    			padding-bottom: 8px;
+
+	    			&:hover,
+	    			&:focus {
+	    				@extend %color-secondary;
+	    			}
+
+	    			&::after {
+	    				height: 2px;
+	    				@extend %bgc-primary;
+	    			}
+	    		}
+
+    			&:last-child {
+    				a {
+	    				@extend %mb0;
+	    			}
+    			}
+	    	}
+	    }
+    }
+
+    .socials {
+    	a {
+    		// box-shadow: 0px 16px 44px rgba(0, 0, 0, 0.3);
+    	}
+    }
+}
+
+.side-area-module::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}

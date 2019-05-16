@@ -1,0 +1,51 @@
+/**
+ * Layout Blog Details
+ *
+ */
+
+.single {
+	.entry-header {
+		.post-title {
+			@extend %mb-half;
+		}
+	}
+
+	.has-post-thumbnail {
+		.post-title {
+			@extend %default-margin-bottom;
+		}
+
+		.post-media {
+			@extend %mb-half;
+		}
+	}
+
+	.entry-content {
+		.post-media {
+			.image-placeholder,
+		    img {
+		    	transform: scale(1);
+		    }
+		}
+	}
+
+	.blog-area {
+		+ .comments-area {
+			border-top-width: 1px;
+			border-top-style: dashed;
+			@extend %border-default;
+			@extend %pt-half;
+		}
+	}
+
+	.entry-footer {
+		.tagcloud {
+			margin-bottom: -8px;
+			@extend %mt-half;
+		}
+	}
+
+	.rwmb-oembed-not-available {
+		@extend %visuallyhidden;
+	}
+}

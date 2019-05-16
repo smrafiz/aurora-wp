@@ -1,0 +1,49 @@
+/**
+ * Components Quote
+ *
+ */
+
+.post-quote {
+	@extend .pos-r;
+	@extend %color-white;
+
+	> i {
+		bottom: 0;
+		right: 15px;
+		font-size: 75px;
+		line-height: 0;
+		opacity: .3;
+		z-index: 10;
+		@extend .pos-a;
+		@extend %color-white;
+	}
+
+	blockquote {
+		z-index: 2;
+		@extend .pos-r;
+
+		&::before {
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		    background: linear-gradient(45deg, rgba(62, 62, 62, 0.99), rgba(80, 80, 80, 0.8));
+			@extend .pos-a;
+		}
+	}
+
+	.quote-source {
+	    display: block;
+	    margin-top: $cx-heading-margin-bottom;
+	    font-style: italic;
+	    font-weight: 600;
+	    font-size: 15px;
+	    @extend %color-white;
+
+	    &:hover {
+	    	@extend %color-primary;
+	    }
+	}
+}

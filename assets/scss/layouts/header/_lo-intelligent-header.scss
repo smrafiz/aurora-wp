@@ -1,0 +1,41 @@
+/**
+ * Layout Intelligent Header
+ *
+ */
+
+.intelligent-header {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+    transform: translateZ(0);
+    @extend %cx-transition;
+
+    &.animated {
+	    animation-duration: .3s;
+	    animation-fill-mode: both;
+	    will-change: transform, opacity;
+
+    	&.slide-down {
+		    animation-name: slideInDown;
+    	}
+
+    	&.slide-up {
+	        animation-name: slideOutUp;
+    	}
+    }
+
+    &.is-scrolling {
+	    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+	    // padding: 5px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    	@extend %bgc-white;
+
+		.logo {
+			img {
+				width: 150px;
+			}
+		}
+    }
+}

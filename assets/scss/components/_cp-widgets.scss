@@ -1,0 +1,641 @@
+/**
+ * Components Widgets
+ *
+ */
+
+.sidebar-widget {
+	padding-top: $cx-heading-margin-bottom;
+	padding-bottom: $cx-heading-margin-bottom;
+    &:first-child {
+    	@extend %pt0;
+    }
+
+    &:last-child {
+    	border-bottom: 0;
+    	@extend %pb0;
+    }
+}
+
+/* Sidebar Widget Title */
+.widgettitle {
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    @extend %color-primary;
+    @extend .pos-r;
+
+    &::before {
+    	content: "";
+    	height: 1px;
+    	width: 100%;
+    	bottom: 0;
+    	@extend .bgc-default-border;
+    	@extend .pos-a;
+    }
+
+    &::after {
+    	content: "";
+    	height: 1px;
+    	width: 35%;
+    	bottom: 0;
+    	left: 0;
+    	@extend %bgc-primary;
+    	@extend .pos-a;
+    }
+}
+
+
+/* Search Widget */
+.widget_search {
+	form {
+		input {
+			&[type="search"] {
+			    text-transform: uppercase;
+			    padding: 0 15px;
+			    font-size: 14px;
+			    letter-spacing: 1px;
+			}
+
+			&[type="submit"] {
+			    text-indent: -99999px;
+			    line-height: 0;
+			    background-image: url(assets/images/svg-icons/search-white.svg);
+			    background-repeat: no-repeat;
+			    background-size: 26px;
+			    background-position: 13px 7px;
+			    border-radius: 0;
+			    padding: 0 25px;
+			    border-width: 1px;
+			    border-style: solid;
+			    @extend %border-primary;
+			    @extend %bgc-primary;
+			    @extend %color-white;
+
+			    &:hover {
+			    	@extend %border-secondary;
+			    	@extend %bgc-secondary;
+			    }
+			}
+		}
+	}
+
+	::-webkit-input-placeholder{
+	  color: #000;
+	}
+	::-moz-placeholder{
+	  color: #000;
+	}
+	:-ms-input-placeholder{
+	  color: #000;
+	}
+	:-moz-placeholder {
+	  color: #000;
+	}
+}
+
+/* List Widgets */
+.widget_nav_menu,
+.widget_rss,
+.widget_recent_entries,
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.footer-widget:not(.widget_recent_comments):not(.codexin-social-share-widget),
+.sidebar-widget:not(.widget_recent_comments):not(.codexin-social-share-widget) {
+	ul {
+		list-style: none;
+	    @extend %padding-0;
+		@extend %margin-0;
+
+		&.children,
+		&.sub-menu {
+			padding-top: 8px;
+		}
+
+	    li {
+	        padding-left: 18px;
+	        padding-bottom: 8px;
+	        line-height: 1.5;
+	        min-height: 22px;
+	        word-break: break-word;
+	        @extend .pos-r;
+
+	        &::before {
+	            content: "\f284";
+	            font-family: Ionicons;
+	            left: 0;
+	            top: 2.5px;
+	            font-size: 20px;
+	            line-height: 1;
+	            @extend .pos-a;
+	        }
+
+	        &:last-child {
+	            @extend %pb0;
+	        }
+	    }
+
+		> li {
+			> a {
+				@extend .pos-r;
+
+				@extend %color-text;
+
+				&:hover,
+				&:hover {
+					@extend %color-primary;
+				}
+			}
+		}
+	}
+}
+
+/* Comments Widget */
+.widget_recent_comments {
+	@extend .widget_archive;
+
+	> ul {
+		> li {
+			&::before {
+				@extend %color-text;
+			}
+
+			a {
+				@extend %color-text;
+
+				&:hover,
+				&:focus {
+					@extend %color-primary;
+				}
+			}
+
+			.comment-author-link {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+/* Calender Widget */
+.widget_calendar {
+	#wp-calendar {
+		text-align: center;
+		width: 100%;
+		@extend %mb0;
+		@extend .pos-r;
+
+		th,
+		td {
+			border: 0;
+		}
+
+		thead,
+		caption {
+			border-bottom-width: 5px;
+			border-bottom-style: solid;
+			border-color: lighten($cx-text-color, 100%);
+		}
+
+		thead {
+			@extend %bgc-offset;
+		}
+
+		caption {
+		    font-weight: bold;
+		    caption-side: top;
+		    padding: .75rem;
+		    text-align: center;
+		    @extend %color-black;
+		    @extend %bgc-offset;
+		}
+
+		tbody {
+			tr:nth-child(odd),
+			tr:nth-child(even) {
+				@extend %bgc-transparent;
+			}
+			td {
+				@extend %bgc-offset;
+				@extend %cx-transition;
+				@extend %color-dark;
+
+				a {
+					font-weight: bold;
+					@extend .pos-r;
+
+					&::before {
+						content: ' ';
+					    z-index: 1;
+					    bottom: -4px;
+					    left: 50%;
+					    width: 4px;
+					    height: 4px;
+					    line-height: 4px;
+					    margin-left: -2px;
+					    text-align: center;
+					    @extend %bgc-primary;
+					    @extend .pos-a;
+					    @extend .circle;
+					    @extend %cx-transition;
+					}
+
+					&:hover {
+						&::before {
+							@extend %bgc-secondary;
+						}
+					}
+				}
+
+				&.pad {
+					@extend %bgc-transparent;
+				}
+
+				&:hover {
+					@extend %bgc-transparent;
+				}
+			}
+
+			#today {
+				background: #ddd;
+			}
+		}
+
+		tfoot {
+			top: 0;
+			right: 0;
+			width: 100%;
+			@extend .pos-a;
+			> tr {
+				display: block;
+			}
+			.pad {
+				@extend %visuallyhidden;
+			}
+			#next,
+			#prev {
+				a {
+				    width: 25px;
+				    height: 25px;
+				    display: block;
+				    text-indent: 100em;
+				    @extend .pos-r;
+				    @extend .oflow-hidden;
+
+				    &::after {
+					    content: '';
+					    top: 4px;
+					    width: 20px;
+					    height: 20px;
+					    @extend %pos-a;
+				    }
+				}
+			}
+
+			#next {
+				float: right;
+				a {
+					&::after {
+						right: -5px;
+					    background-image: url(assets/images/svg-icons/forward.svg);
+					    background-repeat: no-repeat;
+					    display: block;
+					    background-size: 15px;
+					    background-position: 2px;
+					}
+				}
+			}
+
+			#prev {
+				float: left;
+				a {
+					&::after {
+						left: -5px;
+						background-image: url(assets/images/svg-icons/back.svg);
+					    background-repeat: no-repeat;
+					    display: block;
+					    background-size: 15px;
+					    background-position: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tags Widgets */
+.tagcloud {
+	a {
+	    display: inline-block;
+	    margin-right: 4px;
+	    margin-bottom: 8px;
+	    padding: 7px 12px;
+	    border-width: 1px;
+	    border-style: solid;
+	    font-size: 14px;
+	    text-transform: capitalize;
+	    @extend %border-default;
+	    @extend %color-black;
+	    @extend %bgc-offset;
+
+	    &:hover {
+	    	@extend %bgc-primary;
+	    	@extend %border-primary;
+	    	@extend %color-white;
+	    }
+	}
+}
+
+/* Gallery Widget */
+.widget_media_gallery {
+	.gallery-item {
+		padding-right: 0;
+		margin-bottom: 15px;
+
+		img {
+			padding: 3px;
+			border-width: 1px;
+			border-style: solid;
+			@extend %border-default;
+		}
+	}
+
+	.gallery-caption {
+		word-wrap: break-word;
+		border-width: 1px;
+		border-style: solid;
+		@extend %border-default;
+	    @extend %bgc-offset;
+	}
+}
+
+/* Instagram Widget */
+.codexin-instagram-widget {
+	.instagram-images {
+		display: flex;
+		flex-wrap: wrap;
+
+		figure {
+		    flex: 0 0 32%;
+		    max-width: 32%;
+		    margin-right: 2%;
+		    margin-bottom: 2%;
+		    @extend .oflow-hidden;
+
+		    &:nth-of-type(3n) {
+		    	margin-right: 0;
+		    }
+
+		    a {
+		    	display: block;
+		    	@extend .pos-r;
+
+		    	&::before {
+		    		content: "";
+				    bottom: 0;
+				    height: 0;
+				    width: 100%;
+				    background: rgba(0, 0, 0, 0.5);
+		    		@extend .pos-a;
+		    		@extend %cx-transition;
+		    	}
+
+		    	&:hover {
+		    		&::before {
+		    			height: 100%;
+		    			top: 0;
+		    		}
+		    	}
+		    }
+
+		    img {
+		    	width: 100%;
+		    	height: auto;
+		    }
+		}
+	}
+}
+
+/* Popular & Recent Posts Widget */
+.codexin-recent-posts-widget,
+.codexin-popular-posts-widget {
+	.posts-single {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;
+		align-items: center;
+		@extend %border-default;
+
+		.post-thumbnail {
+			margin-right: 20px;
+
+			a {
+				display: block;
+				max-width: 80px;
+				@extend .oflow-hidden;
+				@extend .pos-r;
+			}
+
+			img {
+				transform: scale(1.1);
+				@extend %cx-transition;
+			}
+
+			.overlay {
+				opacity: 0;
+			    visibility: hidden;
+			    z-index: 0;
+			    left: 0;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+			    transform: scale(0.6);
+			    background-color: rgba(0, 0, 0, 0.4);
+			    @extend .pos-a;
+			    @extend %cx-transition;
+			}
+		}
+
+		.post-content {
+			h4 {
+			    font-size: 14px;
+			    text-transform: capitalize;
+			    font-weight: 600;
+			    margin-bottom: 10px;
+			    font-family: $cx-body-font;
+
+			    a {
+			    	@extend %color-dark;
+
+			    	&:hover {
+			    		@extend %color-primary;
+			    	}
+			    }
+
+			    @include media-only(wide, max) {
+			    	margin-bottom: 5px;
+			    }
+			}
+
+			p {
+				@extend %mb0;
+			}
+
+			.post-date,
+			.post-comments {
+				line-height: 1;
+			}
+
+			.post-date {
+				font-size: 15px;
+			}
+
+			.post-comments {
+				font-size: 15px;
+			}
+
+			i {
+				margin-right: 5px;
+				@extend %color-dark;
+			}
+		}
+
+		&:last-child {
+			border-bottom: 0;
+			@extend %pb0;
+			@extend %mb0;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1);
+			}
+			.overlay {
+			    opacity: 1;
+			    visibility: visible;
+			    z-index: 1;
+			    transform: scale(1);
+			}
+		}
+	}
+}
+
+/* RSS Widget */
+.rsswidget {
+    font-weight: 600;
+}
+
+.rss-date {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.rssSummary {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.rssSummary + cite {
+    font-size: 14px;
+}
+
+/* Social Widget */
+.codexin-social-share-widget {
+	.list-inline {
+		margin-bottom: -5px;
+	}
+}
+
+/* Mailchimp Widget */
+.mailchimp-wrapper {
+	.input-group {
+		@extend %pos-r;
+	}
+
+	input {
+		&[type="email"] {
+		    height: 40px;
+		    padding: 10px 120px 10px 15px;
+		    display: inline-block;
+		    width: 100%;
+		    font-size: 15px;
+		    border-width: 1px;
+		    border-style: solid;
+		}
+
+		&[type="submit"] {
+			height: 40px;
+			line-height: 40px;
+			top: 0;
+			right: 0;
+			border-radius: 0;
+		    min-width: 120px;
+		    font-weight: 600;
+		    min-width: 100px;
+		    padding: 0 20px;
+			@extend %bgc-primary;
+			@extend %color-white;
+			@extend %pos-a;
+
+			&:hover {
+				// background: rgba(0, 0, 0, 0.5);
+				// @extend %color-black;
+				@extend %bgc-secondary;
+			}
+		}
+	}
+
+	#colophon & {
+		input {
+			&[type="email"] {
+				background: rgba(255, 255, 255, 0.15);
+				height: 45px;
+				border-color: transparent;
+				@extend %color-white;
+			}
+
+			&[type="submit"] {
+				height: 45px;
+				line-height: 45px;
+				// background: rgba(0, 0, 0, 0.4);
+				@extend %bgc-primary;
+				@extend %border-primary;
+
+				&:hover {
+					// background: rgba(0, 0, 0, 0.5);
+					@extend %bgc-secondary;
+					@extend %border-secondary;
+				}
+			}
+		}
+	}
+}
+
+.mc4wp-form {
+	.mc4wp-error,
+	.mc4wp-success,
+	.mc4wp-notice {
+		padding: 15px;
+		margin-top: 15px;
+		// background: darken($cx-primary-color, 5%);
+		@extend %bgc-offset;
+		p {
+			@extend %mb0;
+		}
+	}
+
+	#colophon & {
+		.mc4wp-error,
+		.mc4wp-success,
+		.mc4wp-notice {
+			background: rgba(0, 0, 0, 0.4);
+		}
+	}
+}

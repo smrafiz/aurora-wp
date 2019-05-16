@@ -1,0 +1,216 @@
+/**
+ * Layout Footer
+ *
+ */
+
+#colophon {
+	@extend %bgc-tertiary;
+
+	h1,h2,h3,h4,h5,h6,p,a,span,ul,li,i {
+		@extend %color-white;
+	}
+
+	.footer-widgets-area {
+		@extend %pt-full;
+		@extend %pb-full;
+	}
+
+	a {
+		&:hover,
+		&:focus {
+			@extend %color-primary;
+		}
+	}
+
+	.footer-column {
+		@include respond-to(tablet) {
+			margin-bottom: $cx-col-spacing;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include respond-to(mobile) {
+			margin-bottom: $cx-col-spacing-mob;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.widgettitle {
+		font-family: $cx-body-font;
+		font-size: 20px;
+		line-height: 1.2;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		margin-bottom: 30px;
+		@extend %pb0;
+		@extend .pos-r;
+
+		&::before {
+			content: none;
+		}
+
+		&::after {
+		    content: "\f17e";
+		    font-family: Ionicons;
+		    top: -1px;
+		    right: 0;
+		    font-size: 16px;
+		    margin-left: 15px;
+		    @extend %bgc-transparent;
+		    @extend %color-primary;
+		    @extend .pos-r;
+		}
+	}
+
+	.footer-widget {
+		@extend %mb-half;
+
+		&:last-child {
+			@extend %mb0;
+		}
+	}
+
+	.widget_nav_menu {
+		ul {
+			li {
+				padding: 5px 0 5px 18px;
+
+				&::before {
+					top: 7.5px;
+				}
+
+				a {
+					display: block;
+				}
+
+				&:first-child {
+					padding-top: 0;
+
+					&::before {
+						top: 2.5px;
+					}
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	select {
+		border-color: white;
+		@extend %color-white;
+		@extend %bgc-tertiary;
+
+		&:focus {
+			border-color: white;
+		}
+	}
+
+	#wp-calendar {
+		thead,
+		caption {
+			@extend %border-tertiary;
+		}
+
+		td {
+			&:hover {
+				@extend %color-white;
+
+				a {
+					@extend %color-white;
+
+					&::before {
+						@extend %bgc-white;
+					}
+				}
+			}
+			a {
+				@extend %color-primary;
+			}
+		}
+	}
+
+	.widget_recent_comments {
+		> ul{
+			> li{
+				&::before {
+					@extend %color-white;
+				}
+			}
+		}
+	}
+
+	.widget_search {
+		input {
+			&[type="search"] {
+				border-color: rgba(255, 255, 255, 0.15);
+				background: rgba(255, 255, 255, 0.15);
+				border-color: transparent;
+				@extend %color-white;
+			}
+
+			&[type="submit"] {
+				background-image: url(assets/images/svg-icons/search-white.svg);
+				// background-color: rgba(0, 0, 0, 0.4);
+				@extend %bgc-primary;
+				@extend %border-primary;
+
+				&:hover {
+					// background-color: rgba(0, 0, 0, 0.5);
+					@extend %bgc-secondary;
+					@extend %border-secondary;
+				}
+			}
+		}
+	}
+
+	.tagcloud {
+		a {
+			border-color: white;
+		    background-color: rgba(0, 0, 0, 0.3);
+
+			&:hover {
+				@extend %border-primary;
+			}
+		}
+	}
+
+	.footer-copyright {
+		padding: 30px 0;
+		background-color: rgba(0, 0, 0, 0.3);
+
+		p {
+			text-align: center;
+			&:last-of-type {
+				@extend %mb0;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder{
+		color: white;
+		font-size: 15px;
+	}
+	::-moz-placeholder{
+		color: white;
+		font-size: 15px;
+	}
+	:-ms-input-placeholder{
+		color: white;
+		font-size: 15px;
+	}
+	:-moz-placeholder {
+		color: white;
+		font-size: 15px;
+	}
+}
+

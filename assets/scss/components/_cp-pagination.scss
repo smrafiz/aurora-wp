@@ -1,0 +1,126 @@
+/**
+ * Components Pagination
+ *
+ */
+
+.posts-nav,
+.nav-links {
+	border-top-width: 1px;
+	border-top-style: dashed;
+	display: flex;
+	justify-content: space-between;
+	@extend %mt-half;
+	@extend %pt-half;
+	@extend %border-default;
+	.post-btn {
+		@extend %margin-0;
+		flex: 0 0 100%;
+		&.nav-next {
+			order:2;
+			text-align: right;
+			padding-left: 15px;
+		}
+
+		&.nav-previous {
+			order:1;
+			text-align: left;
+			padding-right: 15px;
+		}
+
+		a {
+			line-height: 1.3;
+		}
+	}
+	.nav-next {
+		&.post-btn,
+		& + .post-btn {
+			flex: 0 0 50%;
+		}
+	}
+}
+
+
+.single {
+	.posts-nav,
+	.nav-links {
+		.post-btn {
+			&.nav-next {
+				order:1;
+				text-align: left;
+				padding-right: 15px;
+			}
+
+			&.nav-previous {
+				order:2;
+				text-align: right;
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+.number-pagination {
+	border-top-width: 1px;
+	border-top-style: dashed;
+	@extend %mt-half;
+	@extend %pt-half;
+	@extend %border-default;
+
+    .pagination {
+    	line-height: 1;
+    	margin: 0;
+    	justify-content: center;
+
+    	li {
+    		a,
+    		span {
+    			display: block;
+			    font-weight: 400;
+			    padding: 0;
+			    width: 35px;
+			    height: 35px;
+			    line-height: 35px;
+			    margin: 0 5px;
+			    text-align: center;
+			    @extend %color-text;
+			    @extend %bgc-offset;
+
+			    &:hover,
+			    &:focus {
+			    	box-shadow: none;
+	    			@extend %bgc-primary;
+	    			@extend %border-primary;
+	    			@extend %color-white;
+			    }
+
+			    @include media-only(small-mobile, max) {
+			    	width: 26px;
+			    	height: 26px;
+			    	line-height: 27px;
+			    	margin-right: 2px;
+			    }
+    		}
+    		
+    		&.active {
+				span {
+					cursor: default;
+	    			@extend %bgc-primary;
+	    			@extend %border-primary;
+	    			@extend %color-white;
+				}
+    		}
+    	}
+
+    	.dots {
+    		@extend %cx-transition;
+    	}
+    }
+}
+
+.infinite-scroll {
+	.posts-nav,
+	.number-pagination {
+		display: none;
+	}
+
+}

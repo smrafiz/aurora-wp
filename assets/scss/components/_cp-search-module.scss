@@ -1,0 +1,118 @@
+/**
+ * Components Search Module
+ *
+ */
+
+.search-module {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    @extend %bgc-tertiary;
+    transition: transform 0.4s ease-in-out;;
+	transform: translateY(-100%);
+
+	// .search-wrapper {
+	//     max-width: 1140px;
+	//     @extend .pos-r;
+	//     height: 100%;
+	//     width: 100%;
+	//     padding-right: 15px;
+	//     padding-left: 15px;
+	//     margin-right: auto;
+	//     margin-left: auto;
+	// }
+
+	form {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+		width: 75%;
+		max-width: 900px;
+		margin: 0 auto;
+		@extend .pos-r;
+
+		@include respond-to(notebook) {
+			max-width: 700px; 
+		}
+
+		@include respond-to(tablet) {
+			max-width: 700px; 
+		}
+
+	    input {
+	    	&[type="search"] {
+			    font-size: 70px;
+			    line-height: 1;
+			    display: inline-block;
+			    border: 0;
+			    height: 100%;
+			    max-width: calc(100% - 100px);
+			    margin-right: 0;
+			    margin-left: auto;
+			    border-bottom-width: 4px;
+			    border-style: solid;
+			    padding-left: 0;
+			    padding-right: 0;
+			    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+			    @extend %color-primary;
+			    @extend %border-primary;
+			    @extend %bgc-transparent;
+	    	}
+
+	    	&[type="submit"] {
+			    text-indent: -99999px;
+			    background-image: url(assets/images/svg-icons/search-white.svg);
+			    background-repeat: no-repeat;
+			    background-size: 80px;
+			    background-position: 0;
+			    padding: 45px;
+				border: 0;
+				opacity: 0.4;
+			    top: 15px;
+			    left: 0;
+				@extend .pos-a;
+				@extend %bgc-transparent;
+
+				&:hover,
+				&:focus {
+					opacity: 1;
+				}
+	    	}
+	    }
+	}
+
+    .search-module-close {
+	    @extend .pos-a;
+	    top: 30px;
+	    right: 30px;
+
+	    i {
+	    	font-size: 30px;
+	    }
+    }
+
+    &.search-module-open {
+		transform: translateY(0);
+    }
+
+	::-webkit-input-placeholder{
+	  font-size: 70px;
+	  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	}
+	::-moz-placeholder{
+	  font-size: 70px;
+	  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	}
+	:-ms-input-placeholder{
+	  font-size: 70px;
+	  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	}
+	:-moz-placeholder {
+	  font-size: 70px;
+	  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	}
+}

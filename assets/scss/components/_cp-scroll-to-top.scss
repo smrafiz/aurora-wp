@@ -1,0 +1,62 @@
+/**
+ * Components Scroll-to-top
+ *
+ */
+
+#to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    color: lighten($cx-text-color, 100%);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 999;
+	@include box(40px);
+	display: none;
+    @extend %cx-transition;
+    @extend %bgc-primary;
+
+	&::before,
+	&::after {
+	    height: 100%;
+	    width: 100%;
+	    @include abs-position(0, auto, auto, 0);
+	}
+
+    &::before {
+		opacity: 0;
+	    z-index: 2;
+		@include cx-prefix('transform', 'scale(1)');
+    }
+
+    &::after {
+	    z-index: 1;
+	    @include cx-transition('all 0.3s cubic-bezier(.55,0,.1,1)');
+	    @include cx-prefix('transform', 'scale(0)');
+	    background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    i {
+	    font-size: 17px;
+	    top: 0px;
+	    left: 0px;
+	    z-index: 10;
+    	@include box(40px);
+    	@include transform-translate(0, 0);
+    	@extend %pos-r;
+    	@extend %cx-transition;
+    }
+
+    &:hover {
+	    // @include cx-transition('box-shadow 0.3s cubic-bezier(.55,0,.1,1), background-color 0.05s linear 0.25s');
+	    // @include cx-box-shadow('5px 5px 25px 0 rgba(46,61,73,.2)');
+
+	    i {
+		    @include transform-translate(0,-40px);
+	    }
+
+	    &::after {
+			@include cx-prefix('transform', 'scale(1)');
+	    }
+    }
+}
