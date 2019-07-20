@@ -14,7 +14,7 @@ use AuroraThemes\Core\Base as Base;
 use AuroraThemes\Core\Settings as Settings;
 
 // Do not allow directly accessing this file.
-if ( !defined('ABSPATH' ) ) {
+if ( ! defined('ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
 

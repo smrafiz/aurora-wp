@@ -14,7 +14,7 @@ use AuroraThemes\Customizer\Defaults as Defaults;
 use AuroraThemes\Customizer\Controls\Toggle_Switch;
 
 // Do not allow directly accessing this file.
-if ( !defined('ABSPATH' ) ) {
+if ( ! defined('ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
 

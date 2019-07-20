@@ -11,7 +11,7 @@ namespace AuroraThemes\Customizer;
 use AuroraThemes\Core\Customizer as Customizer_Api;
 
 // Do not allow directly accessing this file.
-if ( !defined('ABSPATH' ) ) {
+if ( ! defined('ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
 
