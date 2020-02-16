@@ -200,7 +200,7 @@ class Scripts {
         wp_enqueue_style( 'font-awesome' );
         wp_enqueue_style( 'ionicons' );
         wp_enqueue_style( 'animate' );
-        wp_enqueue_style( 'bootstrap' );
+        // wp_enqueue_style( 'bootstrap' );
         wp_enqueue_style( 'animsition' );
         wp_enqueue_style( 'swiper' );
         wp_enqueue_style( 'photoswipe' );
@@ -210,8 +210,8 @@ class Scripts {
         /**
          * Scripts.
          */
-        wp_enqueue_script( 'popper' );
-        wp_enqueue_script( 'bootstrap' );
+        // wp_enqueue_script( 'popper' );
+        // wp_enqueue_script( 'bootstrap' );
         wp_enqueue_script( 'jquery-easing-js' );
         wp_enqueue_script( 'jquery-superfish' );
         wp_enqueue_script( 'headroom' );

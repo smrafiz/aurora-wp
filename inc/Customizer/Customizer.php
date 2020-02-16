@@ -11,7 +11,7 @@ namespace AuroraThemes\Customizer;
 use AuroraThemes\Core\Customizer as Customizer_Api;
 
 // Do not allow directly accessing this file.
-if ( !defined('ABSPATH' ) ) {
+if ( ! defined('ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
 
@@ -66,6 +66,8 @@ class Customizer {
      * @since  1.0
      */
 	public function register() {
+
+        // Customizer API.
 		$this->customize_settings = Customizer_Api::get_instance();
 
         foreach ( $this->get_classes() as $class ) {
@@ -76,6 +78,7 @@ class Customizer {
             }
         }
 
+        // Initializing Customizer.
         $this->customizer_init();
 	}
 
